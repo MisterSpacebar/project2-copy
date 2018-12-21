@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/elements/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Car Rentals</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<!--
+		CSS
+		============================================= -->
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<header id="header" id="home">
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="index.html">Home</a></li>
+						<li><a href="Dashboard.html">Dashboard</a></li>
+						<li><a href="inventory.html">Manage Inventory</a></li>
+						<li><a href="">Log Out</a></li>
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header><!-- #header -->
+
+	<!-- start banner Area -->
+	<section class="banner-area relative" id="home">
+		<div class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">Manage Inventory</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+	<!-- Start Inventory Table -->
+
+	<div class="whole-wrap">
+		<div class="container">
+			<!--add products via search-->
+			<form id="search-form">
+				<div class="row">
+					<div class="col">
+						<div class="input-field">
+							<input id="searchText" type="text" class="validate" name="searchText">
+							<label for="searchText">Search</label>
+						</div>
+					</div>
+					<div class="col">
+						<div style="text-align: center;">
+							<input class="btn" type="submit" value="Search" />
+							<button type="button" data-toggle='modal' data-target='#add-inv-Modal' id="manual-add-button" class="btn btn-warning">Manual Add</button>
+						</div>
+
+					</div>
+				</div>
+			</form>
+
+			<div id="products-label"></div>
+
+			<table class="table table-hover" style="margin-top: 30px;">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Name</th>
+						<th scope="col">Category</th>
+						<th scope="col">Brand</th>
+						<th scope="col">Price</th>
+						<th scope="col">Quantity</th>
+						<th scope="col">Add</th>
+					</tr>
+				</thead>
+				<tbody id="dataProducts"> </tbody>
+			</table>
+		</div>
+	</div>
+
+	<!--manually add new product-->
+	<div class="modal fade" id="add-inv-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	 aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="inventoryModalTitle">Manual Product Add</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="col s12">
+						<div class="form-group row">
+							<label for="new-product-name" class="col-2 col-form-label">Name</label>
+							<div class="col-10">
+								<input class="form-control" type="text" value="" id="new-product-name">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="new-category" class="col-2 col-form-label">Category</label>
+							<div class="col-10">
+								<input class="form-control" type="text" value="" id="new-category">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="new-quantity" class="col-2 col-form-label">Quantity</label>
+							<div class="col-10">
+								<input class="form-control" type="text" value="" id="new-quantity">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="new-price" class="col-2 col-form-label">Price</label>
+							<div class="col-10">
+								<input class="form-control" type="text" value="" id="new-price">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="new-brand" class="col-2 col-form-label">Brand</label>
+							<div class="col-10">
+								<input class="form-control" type="text" value="" id="new-brand">
+							</div>
+						</div>
+
+						<div class="col">
+							<div style="text-align: center;">
+								<input class="btn" id="new-product-add" type="submit" value="Add Product" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- start footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg- col-md-4 col-sm-4">
+					<div class="single-footer-widget">
+						<h6>Our Team</h6>
+						<ul>
+							<li>Roger Perez</li>
+							<li>Shari Gordon</li>
+							<li>Yabin Wei</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4 col-sm-4">
+					<div class="single-footer-widget">
+						<h6>Programs Used</h6>
+						<ul>
+							<li><a href="https://expressjs.com/">Express</a></li>
+							<li><a href="https://www.mysql.com/">My SQL</a></li>
+							<li><a href="http://www.passportjs.org/">Passport</a></li>
+							<li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+
+						</ul>
+					</div>
+				</div>
+
+
+				<p class="mt-50 mx-auto footer-text col-lg-12">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
+					 class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/easing.min.js"></script>
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/search.js"></script>
+</body>
+
+</html>
